@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Purpose Details</h1>
+
+<div class="row">
+  <div class="col s6 col-offset-3">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ purpose.purpose }}</span>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'purposes_update' purpose.id %}">Edit</a>
+        <a href="{% url 'purposes_delete' purpose.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

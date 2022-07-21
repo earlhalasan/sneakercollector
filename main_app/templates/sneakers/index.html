@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Sneaker List</h1>
+
+{% for sneaker in sneakers %}
+<div class="card">
+  <a href="{% url "detail" sneaker.id %}">
+    <div class="card-content">
+      <span class="card-title">{{ sneaker.name }}</span>
+      <p>Brand: {{ sneaker.brand }}</p>
+      <p>Model: {{ sneaker.model }}</p>
+      <p>Release Year: {{sneaker.year}}</p>
+      <p>Description: {{ sneaker.description }}</p>
+    </div></a
+  >
+</div>
+{% endfor %} {% endblock %}
